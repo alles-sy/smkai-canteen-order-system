@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canteen Sekolah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="loginPage" class="container">
+    <h2>Login</h2>
+    <p>Pilih Role:</p>
+    <button onclick="loginRole('admin')">Admin</button>
+    <button onclick="loginRole('guru')">Guru</button>
+    <button onclick="loginRole('pelajar')">Pelajar</button>
+  </div>
+
+  <!-- Admin Page -->
+  <div id="adminPage" class="container hidden">
+    <h2>Admin - Tambah Menu</h2>
+    <form onsubmit="return addMenu()">
+      <input type="text" id="itemName" placeholder="Nama Menu" required>
+      <input type="number" id="itemPrice" placeholder="Harga (RM)" required>
+      <select id="itemCategory">
+        <option value="Makanan">Makanan</option>
+        <option value="Air">Air</option>
+      </select>
+      <button type="submit">Tambah</button>
+    </form>
+
+    <div class="columns">
+      <div class="column">
+        <h3>Makanan</h3>
+        <ul id="foodList"></ul>
+        <h4>Inbox Makanan</h4>
+        <ul id="newFoodOrders"></ul>
+      </div>
+      <div class="column">
+        <h3>Air</h3>
+        <ul id="drinkList"></ul>
+        <h4>Inbox Air</h4>
+        <ul id="newDrinkOrders"></ul>
+      </div>
+    </div>
+
+    <h3>Senarai Semua Pesanan:</h3>
+    <ul id="allOrders"></ul>
+
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Customer Page -->
+  <div id="customerPage" class="container hidden">
+    <h2>Menu Canteen</h2>
+    <input type="text" id="buyerName" placeholder="Nama Anda" required><br>
+    <input type="text" id="buyerRequest" placeholder="Request (contoh: extra pedas)">
+
+    <div class="columns">
+      <div class="column">
+        <h3>Makanan</h3>
+        <ul id="customerFood"></ul>
+      </div>
+      <div class="column">
+        <h3>Air</h3>
+        <ul id="customerDrink"></ul>
+      </div>
+    </div>
+
+    <h3>Pesanan Anda:</h3>
+    <ul id="orderList"></ul>
+
+    <h3>Inbox:</h3>
+    <ul id="customerInbox"></ul>
+
+    <p><b>Total: RM <span id="totalPrice">0.00</span></b></p>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
