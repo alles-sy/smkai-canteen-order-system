@@ -1,0 +1,110 @@
+/* Global Styles */
+/* Global Styles */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #ffb6c1, #ffc0cb, #ffd1dc);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  width: 360px;
+  margin: 30px auto;
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+  border: 2px solid #ff99cc;
+  transition: transform 0.2s;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+h2 { color: #ff3399; text-shadow: 1px 1px 2px #ffb6c1;}
+h3 { color: #ff66b2; }
+h4 { color: #ff66b2; }
+
+input, select, button {
+  width: 90%;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #ff99cc;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  border-color: #ff66b2;
+  box-shadow: 0 0 10px rgba(255, 102, 178, 0.6);
+}
+
+button {
+  background: linear-gradient(45deg, #ff80bf, #ff4da6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #ff4da6, #ff80bf);
+  box-shadow: 0 0 12px rgba(255, 102, 178, 0.8);
+}
+
+ul { list-style: none; padding: 0; }
+li {
+  background: #ffe6f0;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 15px;
+  color: #cc0066;
+  font-weight: bold;
+  border: 1px solid #ffb3d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+li:hover { transform: scale(1.03); }
+
+.logout { background: #ff3366 !important; margin-top: 15px; }
+
+.hidden { display: none; }
+
+li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #ff4d88;
+  color: white;
+}
+
+li button:hover { background: #ff1a66; }
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.column { flex: 1; }
+
+.column h3, .column h4 { text-align: center; }
